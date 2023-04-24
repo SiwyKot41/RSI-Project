@@ -1,5 +1,5 @@
 
-package net.wvffle.rsi.client.generated;
+package org.fr.rsi.client.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for helloResponse complex type.
+ * <p>Java class for getImageResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="helloResponse">
+ * &lt;complexType name="getImageResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,23 +27,22 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "helloResponse", propOrder = {
+@XmlType(name = "getImageResponse", propOrder = {
     "_return"
 })
-public class HelloResponse {
+public class GetImageResponse {
 
     @XmlElement(name = "return")
-    protected String _return;
+    protected byte[] _return;
 
     /**
      * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
-     *     
+     *     byte[]
      */
-    public String getReturn() {
+    public byte[] getReturn() {
         return _return;
     }
 
@@ -52,10 +51,9 @@ public class HelloResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
-     *     
+     *     byte[]
      */
-    public void setReturn(String value) {
+    public void setReturn(byte[] value) {
         this._return = value;
     }
 

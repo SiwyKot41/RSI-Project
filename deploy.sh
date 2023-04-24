@@ -1,8 +1,8 @@
 #!/bin/bash
 
-INSTANCE_NAME=wsdl--main--gf--wvffle
+INSTANCE_NAME=wsdl--main--rsi-06--siwykot41
 SERVICE=ImageService
-PACKAGE=net.wvffle.rsi
+PACKAGE=org.fr.rsi
 
 # Generate server war file
 ./mvnw clean install war:war exec:exec

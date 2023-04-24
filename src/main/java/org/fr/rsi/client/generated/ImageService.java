@@ -1,5 +1,5 @@
 
-package net.wvffle.rsi.client.generated;
+package org.fr.rsi.client.generated;
 
 import java.net.URL;
 import javax.xml.namespace.QName;
@@ -16,17 +16,17 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ImageService", targetNamespace = "http://services.rsi.wvffle.net/", wsdlLocation = "/service.wsdl")
+@WebServiceClient(name = "ImageService", targetNamespace = "http://services.rsi.fr.org/", wsdlLocation = "/service.wsdl")
 public class ImageService
     extends Service
 {
 
     private final static URL IMAGESERVICE_WSDL_LOCATION;
     private final static WebServiceException IMAGESERVICE_EXCEPTION;
-    private final static QName IMAGESERVICE_QNAME = new QName("http://services.rsi.wvffle.net/", "ImageService");
+    private final static QName IMAGESERVICE_QNAME = new QName("http://services.rsi.fr.org/", "ImageService");
 
     static {
-        IMAGESERVICE_WSDL_LOCATION = net.wvffle.rsi.client.generated.ImageService.class.getResource("/service.wsdl");
+        IMAGESERVICE_WSDL_LOCATION = org.fr.rsi.client.generated.ImageService.class.getResource("/service.wsdl");
         WebServiceException e = null;
         if (IMAGESERVICE_WSDL_LOCATION == null) {
             e = new WebServiceException("Cannot find '/service.wsdl' wsdl. Place the resource correctly in the classpath.");
@@ -65,7 +65,7 @@ public class ImageService
      */
     @WebEndpoint(name = "ImagePort")
     public Image getImagePort() {
-        return super.getPort(new QName("http://services.rsi.wvffle.net/", "ImagePort"), Image.class);
+        return super.getPort(new QName("http://services.rsi.fr.org/", "ImagePort"), Image.class);
     }
 
     /**
@@ -77,7 +77,7 @@ public class ImageService
      */
     @WebEndpoint(name = "ImagePort")
     public Image getImagePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://services.rsi.wvffle.net/", "ImagePort"), Image.class, features);
+        return super.getPort(new QName("http://services.rsi.fr.org/", "ImagePort"), Image.class, features);
     }
 
     private static URL __getWsdlLocation() {

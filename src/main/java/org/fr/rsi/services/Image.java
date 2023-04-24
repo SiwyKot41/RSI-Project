@@ -1,4 +1,4 @@
-package net.wvffle.rsi.services;
+package org.fr.rsi.services;
 
 import javax.imageio.ImageIO;
 import javax.jws.WebMethod;

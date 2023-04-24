@@ -1,5 +1,5 @@
 
-package net.wvffle.rsi.client.generated;
+package org.fr.rsi.client.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for hello complex type.
+ * <p>Java class for getImage complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="hello">
+ * &lt;complexType name="getImage">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -26,10 +26,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "hello", propOrder = {
+@XmlType(name = "getImage", propOrder = {
     "arg0"
 })
-public class Hello {
+public class GetImage {
 
     protected String arg0;
 

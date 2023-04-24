@@ -1,4 +1,4 @@
-package net.wvffle.rsi.errors;
+package org.fr.rsi.errors;
 
 public class InvalidInputException extends Exception {
     private String errorDetails;

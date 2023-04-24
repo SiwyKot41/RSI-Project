@@ -1,4 +1,4 @@
-package net.wvffle.rsi.client;
+package org.fr.rsi.client;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -6,15 +6,15 @@ import javax.swing.JLabel;
 import javax.xml.bind.DatatypeConverter;
 import javax.xml.ws.soap.MTOMFeature;
 
-import net.wvffle.rsi.client.generated.Image;
-import net.wvffle.rsi.client.generated.ImageService;
+import org.fr.rsi.client.generated.Image;
+import org.fr.rsi.client.generated.ImageService;
 
 public class Main {
     public static void main(String[] args) {
         ImageService service  = new ImageService();
 
         Image port = service.getImagePort(new MTOMFeature());
-        byte[] imageBytes = port.getImage("image.jpg");
+        byte[] imageBytes = port.getImage("shrek.jpg");
 
         try {
             JFrame frame = new JFrame();
