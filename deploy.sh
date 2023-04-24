@@ -2,6 +2,7 @@
 
 INSTANCE_NAME=wsdl--main--gf--wvffle
 SERVICE=ImageService
+PACKAGE=net.wvffle.rsi
 
 # Generate server war file
 ./mvnw clean install war:war exec:exec
@@ -14,8 +15,10 @@ sleep 0.1
 
 wget https://$INSTANCE_NAME.code.wvffle.net/RSI/$SERVICE?wsdl -O - | sed 's/http:\/\/'$INSTANCE_NAME'.code.wvffle.net:80/https:\/\/'$INSTANCE_NAME'.code.wvffle.net\//g' > src/main/resources/service.wsdl
 
-mkdir -p src/main/java/net/wvffle/rsi/client/generated
-wsimport -J-Djavax.xml.accessExternalSchema=all src/main/resources/service.wsdl -keep -p net.wvffle.rsi.client.generated -d src/main/java -wsdllocation /service.wsdl
+PACKAGE_DIR="$(echo $PACKAGE | sed 's/\./\//g')"
+
+mkdir -p src/main/java/$PACKAGE_DIR/client/generated
+wsimport -J-Djavax.xml.accessExternalSchema=all src/main/resources/service.wsdl -keep -p $PACKAGE.client.generated -d src/main/java -wsdllocation /service.wsdl
 
 # Generate client Jar file
 ./mvnw install

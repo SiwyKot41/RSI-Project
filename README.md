@@ -1,9 +1,10 @@
-# WebService with Glassfish server for study assignments
+# RSI Coder Template
 
-For run the server use: ```./glassfish5/bin/asadmin start-domain```
+This is an example repository for the RSI assignments on our coder instance
 
-For creating ```.war``` file and deploy app on the server use ```./deploy.sh``` script.
+To deploy your code onto the GlassFish server, use:
+```sh
+. deploy.sh
+```
 
-If script does not work use: ```chmod +x deploy.sh```
-
-Server requires java 8
+*NOTE:* Sometimes, the deployment may fail with `java.lang.RuntimeException: Servlet web service endpoint '' failure. Please see server.log for more details.` exception. In such case, just redeploy using the deploy script.
